@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./App.css";
 import Axios from "./comopnents/axios/Axios";
 import DefaultFetch from "./comopnents/fetch/DefaulFetch";
@@ -12,9 +13,11 @@ function App() {
       <br />
       <br />
 
-      {/* <DefaultFetch />
-      <Axios /> */}
-      <Swr />
+      <Suspense fallback={<h1>Loading</h1>}>
+        <Swr />
+      </Suspense>
+      <Axios />
+      <DefaultFetch />
     </div>
   );
 }

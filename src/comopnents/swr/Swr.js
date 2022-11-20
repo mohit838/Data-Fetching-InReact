@@ -8,7 +8,10 @@ const fetcher = (url) => axios.get(url).then((res) => res.data);
 const Swr = () => {
   const { data, error } = useSWR(
     "https://jsonplaceholder.typicode.com/posts",
-    fetcher
+    fetcher,
+    {
+      suspense: true,
+    }
   );
 
   //   console.log(data);
@@ -26,7 +29,7 @@ const Swr = () => {
       <br />
       {/* Main Code */}
       <div>
-        {data?.map((singleData) => (
+        {data.map((singleData) => (
           <ul key={singleData.id} style={{ listStyle: "none" }}>
             <li>{singleData.userId}</li>
             <li>{singleData.title}</li>
