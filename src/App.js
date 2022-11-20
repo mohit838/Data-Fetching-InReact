@@ -1,6 +1,7 @@
 import "./App.css";
 import Axios from "./comopnents/axios/Axios";
 import DefaultFetch from "./comopnents/fetch/DefaulFetch";
+import Swr from "./comopnents/swr/Swr";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <br />
       <br />
 
-      <DefaultFetch />
-      <Axios />
+      {/* <DefaultFetch />
+      <Axios /> */}
+      <Swr />
     </div>
   );
 }
