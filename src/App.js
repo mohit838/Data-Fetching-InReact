@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Axios from "./comopnents/axios/Axios";
+import DefaultFetch from "./comopnents/fetch/DefaulFetch";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>4 Ways to fetch data form API Calling</h1>
+
+      <br />
+      <br />
+      <br />
+
+      <DefaultFetch />
+      <Axios />
     </div>
   );
 }
 
 export default App;
+
+// NOTE: Link for API Calling
+// https://jsonplaceholder.typicode.com/
